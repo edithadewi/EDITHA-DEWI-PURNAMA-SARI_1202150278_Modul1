@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp" android:paddingBottom="16dp" android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="studycase1.edithadewi.example.com.edithadewipurnamasari_1202150278_modul1.MainActivity">
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintTop_toTopOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="20dp" android:layout_gravity="center" android:textSize="25sp" android:text="Makan Malam"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center" android:textSize="20sp" android:text="dengan Milea" android:textAlignment="center"/>
+
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginTop="40dp" android:hint="Masukkan Menu" android:id="@+id/menu"/>
+
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginTop="25dp" android:hint="Masukkan Jumlah" android:id="@+id/jumlah"/>
+
+
+    <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="match_parent">
+
+        <Button android:layout_height="wrap_content" android:layout_width="100dp" android:layout_marginTop="20dp" android:text="Eatbus" android:id="@+id/eatbus" android:onClick="launcheatbus" android:layout_weight="1" android:layout_marginRight="50dp" android:textColor="#fff" android:background="@color/colorAccent"/>
+
+        <Button android:layout_height="wrap_content" android:layout_width="100dp" android:layout_marginTop="20dp" android:text="Abnormal" android:id="@+id/abnormal" android:onClick="lauchabnormal" android:layout_weight="1" android:textColor="#fff" android:background="@color/colorAccent"/>
+
+    </LinearLayout>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Test" android:id="@+id/restaurant" android:visibility="invisible"/>
+
+</LinearLayout>
+
+
