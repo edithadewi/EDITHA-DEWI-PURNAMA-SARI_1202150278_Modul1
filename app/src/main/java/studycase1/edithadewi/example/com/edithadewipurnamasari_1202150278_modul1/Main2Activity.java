@@ -8,52 +8,33 @@ import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
 
-    TextView a,d,c,f;
+    TextView w, x, y, z;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        a = (TextView) findViewById(R.id.namamenu);
+        w = (TextView) findViewById(R.id.namamenu);
 
-        d = (TextView) findViewById(R.id.jumlahporsi);
+        x = (TextView) findViewById(R.id.jumlahporsi);
 
-        c = (TextView) findViewById(R.id.harga);
+        y = (TextView) findViewById(R.id.harga);
 
-        f = (TextView) findViewById(R.id.restaurant);
+        z = (TextView) findViewById(R.id.restaurant);
 
-        if (getIntent().getExtras()!=null){
+        if (getIntent().getExtras() != null) {
 
             Bundle bundle = getIntent().getExtras();
-            a.setText(bundle.getString("Menu"));
-            d.setText(bundle.getString("Jumlah"));
-            c.setText(bundle.getString("Total"));
-            f.setText(bundle.getString("Restaurant"));
+            w.setText(bundle.getString("Menu"));
+            x.setText(bundle.getString("Jumlah"));
+            y.setText(bundle.getString("Total"));
+            z.setText(bundle.getString("Restaurant"));
+        } else {
+            w.setText(getIntent().getStringExtra("Menu"));
+            x.setText(getIntent().getStringExtra("Jumlah"));
+            y.setText(getIntent().getStringExtra("Total"));
+            z.setText(getIntent().getStringExtra("Restaurant"));
         }
-
-        else
-        {
-            a.setText(getIntent().getStringExtra("Menu"));
-            d.setText(getIntent().getStringExtra("Jumlah"));
-            c.setText(getIntent().getStringExtra("Total"));
-            f.setText(getIntent().getStringExtra("Restaurant"));
-        }
-//
-//        Intent b = getIntent();
-//
-//        String menu = b.getStringExtra(MainActivity.EXTRA_MESSAGE);
-//
-//        String jmlh = b.getStringExtra(MainActivity.EXTRA_MESSAGE);
-//
-//        String ttal = b.getStringExtra(MainActivity.EXTRA_MESSAGE);
-//
-//        a.setText(menu);
-//
-//        d.setText(jmlh);
-//
-//        c.setText(ttal);
-
-
 
 
     }

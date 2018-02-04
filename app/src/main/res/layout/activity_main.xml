@@ -2,31 +2,86 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingTop="16dp"
-    android:paddingRight="16dp"
-    android:paddingLeft="16dp" android:paddingBottom="16dp" android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     tools:context="studycase1.edithadewi.example.com.edithadewipurnamasari_1202150278_modul1.MainActivity">
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" app:layout_constraintTop_toTopOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="20dp" android:layout_gravity="center" android:textSize="25sp" android:text="Makan Malam"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Makan Malam"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center" android:textSize="20sp" android:text="dengan Milea" android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="dengan Milea"
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
-    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginTop="40dp" android:hint="Masukkan Menu" android:id="@+id/menu"/>
+    <EditText
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Masukkan Menu" />
 
-    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginTop="25dp" android:hint="Masukkan Jumlah" android:id="@+id/jumlah"/>
+    <EditText
+        android:id="@+id/jumlah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="Masukkan Jumlah" />
 
 
-    <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <Button android:layout_height="wrap_content" android:layout_width="100dp" android:layout_marginTop="20dp" android:text="Eatbus" android:id="@+id/eatbus" android:onClick="launcheatbus" android:layout_weight="1" android:layout_marginRight="50dp" android:textColor="#fff" android:background="@color/colorAccent"/>
+        <Button
+            android:id="@+id/eatbus"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="launcheatbus"
+            android:text="Eatbus"
+            android:textColor="#fff" />
 
-        <Button android:layout_height="wrap_content" android:layout_width="100dp" android:layout_marginTop="20dp" android:text="Abnormal" android:id="@+id/abnormal" android:onClick="lauchabnormal" android:layout_weight="1" android:textColor="#fff" android:background="@color/colorAccent"/>
+        <Button
+            android:id="@+id/abnormal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="lauchabnormal"
+            android:text="Abnormal"
+            android:textColor="#fff" />
 
     </LinearLayout>
 
-    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Test" android:id="@+id/restaurant" android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:visibility="invisible" />
 
 </LinearLayout>
 

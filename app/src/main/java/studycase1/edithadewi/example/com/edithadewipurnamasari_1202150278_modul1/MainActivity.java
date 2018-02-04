@@ -11,13 +11,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText namamenu,jml;
-    private Button restaurant,restaurant2;
+    private EditText namamenu, jml;
+    private Button restaurant, restaurant2;
     private TextView tmptmakan;
 
     private int uang = 65500;
 
-    private int jumlah1,hsl;
+    private int jumlah1, hsl;
 
     public static final String EXTRA_MESSAGE = "yey";
 
@@ -32,10 +32,7 @@ public class MainActivity extends AppCompatActivity {
         namamenu = (EditText) findViewById(R.id.menu);
         jml = (EditText) findViewById(R.id.jumlah);
         tmptmakan = (TextView) findViewById(R.id.restaurant);
-//
-//        restaurant = (Button) findViewById(R.id.eatbus);
-//        restaurant2 = (Button) findViewById(R.id.abnormal);
-//
+
     }
 
     public void launcheatbus(View view) {
@@ -50,23 +47,23 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("Menu", menu);
 
-        bundle.putString("Jumlah",jumlah);
+        bundle.putString("Jumlah", jumlah);
 
-        bundle.putString("Total",String.valueOf(hsl));
+        bundle.putString("Total", String.valueOf(hsl));
 
-        bundle.putString("Restaurant","Eatbus");
+        bundle.putString("Restaurant", "Eatbus");
 
-        Intent a = new Intent(this,Main2Activity.class);
+        Intent a = new Intent(this, Main2Activity.class);
 
         a.putExtras(bundle);
 
         startActivity(a);
 
-        if (hsl > uang){
-            Toast.makeText(this,"Jangan disini makan malamnya, uang kamu tidak cukup",Toast.LENGTH_LONG).show();
+        if (hsl > uang) {
+            Toast.makeText(this, "Jangan disini makan malamnya, uang kamu tidak cukup", Toast.LENGTH_LONG).show();
+        }else {
+            Toast.makeText(this, "Makan disini saja", Toast.LENGTH_LONG).show();
         }
-
-
 
 
     }
@@ -82,20 +79,22 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("Menu", menu);
 
-        bundle.putString("Jumlah",jumlah);
+        bundle.putString("Jumlah", jumlah);
 
-        bundle.putString("Total",String.valueOf(hsl));
+        bundle.putString("Total", String.valueOf(hsl));
 
-        bundle.putString("Restaurant","Abnormal");
+        bundle.putString("Restaurant", "Abnormal");
 
-        Intent a = new Intent(this,Main2Activity.class);
+        Intent a = new Intent(this, Main2Activity.class);
 
         a.putExtras(bundle);
 
         startActivity(a);
 
-        if (hsl < uang){
-            Toast.makeText(this,"Disini aja Makan Malamnya",Toast.LENGTH_LONG).show();
+        if (hsl < uang) {
+            Toast.makeText(this, "Disini aja Makan Malamnya", Toast.LENGTH_LONG).show();
+        }else {
+            Toast.makeText(this, "Uang kamu tidak cukup", Toast.LENGTH_LONG).show();
         }
     }
 }
